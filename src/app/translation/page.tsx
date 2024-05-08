@@ -26,7 +26,7 @@ const CodeTranslationChatbot = () => {
     ]);
 
     try {
-      const result = await model.generateContent(prompt, requestOptions);
+      const result = await model.generateContent(prompt);
       const response = await result.response;
       setMessages((prevMessages) => [
         ...prevMessages.slice(0, -1),

@@ -27,7 +27,7 @@ const generateResponse = async (prompt: string, chatbox: HTMLUListElement) => {
   chatbox.scrollTo(0, chatbox.scrollHeight);
 
   try {
-    const result = await model.generateContent(prompt, requestOptions);
+    const result = await model.generateContent(prompt);
     const response = await result.response;
     incomingChat.querySelector("p")!.textContent = response.text();
   } catch (error) {

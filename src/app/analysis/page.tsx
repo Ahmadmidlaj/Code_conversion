@@ -1,6 +1,6 @@
 // pages/index.tsx
 "use client"
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export default function Home() {
@@ -9,10 +9,13 @@ export default function Home() {
 
   const genAI = new GoogleGenerativeAI("AIzaSyBAX_z9O3M8LBZHLYU5jE6X62axupBbx_4"); // Replace YOUR_API_KEY with your actual API key
 
-  const handleInputChange = (e) => {
+  // const handleInputChange = (e: { target: { value: SetStateAction<string>; }; }) => {
+  //   setChatInput(e.target.value);
+  // };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setChatInput(e.target.value);
   };
-
   const handleChatSubmission = async () => {
     if (!chatInput.trim()) return;
 
@@ -31,7 +34,7 @@ export default function Home() {
     setChatMessages([...chatMessages, incomingMessage]);
 
     try {
-      const result = await model.generateContent(chatInput, requestOptions);
+      const result = await model.generateContent(chatInput);
       const response = await result.response;
       const botResponse = { user: 'bot', message: 'Here is the detailed analysis of your codebase: ' + response.text() };
       setChatMessages([...chatMessages.filter(msg => msg !== incomingMessage), botResponse]);
