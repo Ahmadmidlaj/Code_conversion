@@ -111,7 +111,7 @@ const CodeTranslationChatbot = () => {
             />
             <button
               type="submit"
-              className="px-4 py-2 bg-indigo-600 text-white rounded-r-lg hover:bg-indigo-700 transition-colors duration-300"
+              className="px-4 py-2 bg-indigo-600 text-white rounded-r-lg hover:bg-indigo-700 transition-colors duration-300 "
             >
               Send
             </button>
