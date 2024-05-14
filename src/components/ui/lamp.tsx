@@ -16,7 +16,7 @@ export default function Lamp() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-5xl"
       >
-        Please Select  <br /> What you want to do today
+        Please Select  <br /> the tool from below options
       </motion.h1>
     </LampContainer>
   );

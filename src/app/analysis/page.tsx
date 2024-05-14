@@ -87,6 +87,8 @@
 //     </div>
 //   );
 // }
+
+
 "use client";
 import { SetStateAction, useState } from 'react';
 import { GoogleGenerativeAI } from "@google/generative-ai";
