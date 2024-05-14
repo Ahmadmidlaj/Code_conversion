@@ -17,6 +17,7 @@
     "@uiw/codemirror-theme-tokyo-night": "^4.22.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "crypto-js": "^4.2.0",
     "framer-motion": "^11.1.9",
     "lucide-react": "^0.378.0",
     "next": "14.2.3",
@@ -25,12 +26,15 @@
     "react-dom": "^18",
     "react-syntax-highlighter": "^15.5.0",
     "simplex-noise": "^4.0.1",
+    "sodium-native": "^4.1.1",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/sodium-native": "^2.3.9",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
