@@ -278,7 +278,8 @@ export default function Doc() {
     }
 
     // Check if the input is a valid programming code
-    const codeRegex = /\b(function|class|import|export|const|let|var|IDENTIFICATION|PROGRAM-ID|DATA|WORKING-STORAGE|PROCEDURE|DIVISION)\b/i;
+    // const codeRegex = /\b(function|class|import|export|const|let|var|IDENTIFICATION|PROGRAM-ID|DATA|WORKING-STORAGE|PROCEDURE|DIVISION)\b/i;
+    const codeRegex = /\b(function|class|import|export|const|let|var|IDENTIFICATION|PROGRAM-ID|DATA|WORKING-STORAGE|PROCEDURE|DIVISION|program|unit|library|uses|begin|end|interface|implementation|type|const|var|array|record|set|if|then|else|case|of|while|repeat|until|for|to|downto|procedure|function|constructor|destructor)\b/i;
     if (!codeRegex.test(chatInput)) {
       setChatOutput('Error: The input does not appear to be a valid programming code. Please provide a valid codebase for analysis.');
       return;

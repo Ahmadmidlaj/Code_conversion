@@ -23,7 +23,8 @@ export default function Doc() {
     }
 
     // Check if the input is a valid programming code
-    const codeRegex = /\b(function|class|import|export|const|let|var|IDENTIFICATION|PROGRAM-ID|DATA|WORKING-STORAGE|PROCEDURE|DIVISION)\b/i;
+    // const codeRegex = /\b(function|class|import|export|const|let|var|IDENTIFICATION|PROGRAM-ID|DATA|WORKING-STORAGE|PROCEDURE|DIVISION)\b/i;
+    const codeRegex = /\b(function|class|import|export|const|let|var|IDENTIFICATION|PROGRAM-ID|DATA|WORKING-STORAGE|PROCEDURE|DIVISION|program|unit|library|uses|begin|end|interface|implementation|type|const|var|array|record|set|if|then|else|case|of|while|repeat|until|for|to|downto|procedure|function|constructor|destructor)\b/i;
     if (!codeRegex.test(chatInput)) {
       setChatOutput('Error: The input does not appear to be a valid programming code. Please provide a valid codebase for documentation.');
       return;
@@ -40,7 +41,7 @@ export default function Doc() {
     };
 
     try {
-      const result = await model.generateContent("Create complete optimized documentation for the following code like  classes, variables, dependencies, and functionality.If any possible major errors are there , list that on top and then generate response:\n\n" + chatInput);
+      const result = await model.generateContent("Create complete optimized documentation for the following code like  classes, variables, dependencies, and functionality.If any major errors are there , list that on top :\n\n" + chatInput);
       const response = await result.response;
       const botResponse = 'Your documentation:\n\n' + response.text();
       setChatOutput(botResponse);
