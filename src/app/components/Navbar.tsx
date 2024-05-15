@@ -19,18 +19,20 @@ const NavItems: NavItem[] = [
     label: "Home",
     href: "/",
   },
+
   {
-    label: "Translator",
-    href: "/translation",
+    label: "Analysis",
+    href: "/analysis",
   },
   {
     label: "Documentation",
     href: "/document",
   },
   {
-    label: "Analysis",
-    href: "/analysis",
+    label: "Translator",
+    href: "/translation",
   },
+
 ];
 
 export default function Navbar() {
